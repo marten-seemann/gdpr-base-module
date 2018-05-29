@@ -3,6 +3,8 @@
     [{block name="oegdprbase_account_manage_reviews"}]
         [{if $oViewConf->getActiveTheme() == 'azure'}]
             [{include file="oegdprbaseaccountreviewaccount_menu_azure.tpl"}]
+        [{elseif strpos($oViewConf->getActiveTheme(), "roxid") !== false}]
+            [{include file="oegdprbaseaccountreviewaccount_menu_roxid.tpl" }]
         [{else}]
             [{include file="oegdprbaseaccountreviewaccount_menu_flow.tpl" }]
         [{/if}]

@@ -25,6 +25,39 @@
               }
             })
         '}]
+    [{elseif strpos($oViewConf->getActiveTheme(), "roxid") !== false}]
+        <button id="oegdprbase-delete-shipping-address-button" class="btn btn-danger pull-right oegdprbase-delete-shipping-address-button" title="[{oxmultilang ident="OEGDPRBASE_DELETE"}]"><i class="fa fa-trash"></i> [{oxmultilang ident="OEGDPRBASE_DELETE"}]</button>
+        [{capture assign="deleteaddrjs"}]
+            var deleteButton = $("#oegdprbase-delete-shipping-address-button");
+            var activeAddressId = $("input[name=oxaddressid]:checked").val();
+
+            if($(".z-delivery-addresses input[type=radio]:visible").length == 0) {
+                deleteButton.hide();
+            }
+            
+            deleteButton.bind("click", function(ev) {
+                ev.preventDefault();
+                bootbox.confirm({
+                    message: "[{oxmultilang ident="OEGDPRBASE_DELETE_SHIPPING_ADDRESS"}]",
+                    buttons: {
+                        confirm: {
+                            label: '[{oxmultilang ident="OEGDPRBASE_DELETE"}]',
+                            className: 'btn-danger'
+                        },
+                        cancel: {
+                            label: '[{oxmultilang ident="CANCEL"}]',
+                        }
+                    },
+                    callback: function(result) {
+                        if(!result) { return; }
+                        window.delete_shipping_address_modal_form_[{$delivadr->oxaddress__oxid->value}].submit();
+                        return false;
+                    }
+                });
+            });
+        [{/capture}]
+
+        [{oxscript add=$deleteaddrjs}]
     [{else}]
         [{foreach from=$aUserAddresses item=address name="shippingAdresses"}]
             <button id="oegdprbase-delete-shipping-address-button-[{$address->oxaddress__oxid->value}]" class="btn btn-danger btn-xs hasTooltip pull-right dd-action oegdprbase-delete-shipping-address-button"

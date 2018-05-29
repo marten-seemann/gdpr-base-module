@@ -3,6 +3,7 @@
     [{*CSS Switch according theme*}]
     [{if $oViewConf->getActiveTheme() == 'azure'}]
         [{oxstyle include=$oViewConf->getModuleUrl('oegdprbase','out/css/oegdprbase-azure.css')}]
+    [{elseif strpos($oViewConf->getActiveTheme(), "roxid") !== false}]
     [{else}]
         [{oxstyle include=$oViewConf->getModuleUrl('oegdprbase','out/css/oegdprbase-flow.css')}]
     [{/if}]

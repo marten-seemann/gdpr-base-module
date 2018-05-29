@@ -30,12 +30,12 @@ $sMetadataVersion = '1.1';
 $aModule = array(
     'id'          => 'oegdprbase',
     'title'       => array(
-        'de' => 'GDPR Base',
-        'en' => 'GDPR Base',
+        'de' => 'GDPR Base, ROXID version',
+        'en' => 'GDPR Base, ROXID version',
     ),
     'description' => array(
-        'de' => 'Das Modul stellt Basisfunktionalit&auml;t f&uuml;r die Datenschutz-Grundverordnung (DSGVO) bereit',
-        'en' => 'This module provides the basic functionality for the European General Data Protection Regulation (GDPR)',
+        'de' => 'Das Modul stellt Basisfunktionalit&auml;t f&uuml;r die Datenschutz-Grundverordnung (DSGVO) bereit. Angepasst für ROXID.',
+        'en' => 'This module provides the basic functionality for the European General Data Protection Regulation (GDPR). Modified for ROXID.',
     ),
     'thumbnail'   => 'out/pictures/logo.png',
     'version'     => '1.0.0',
@@ -93,13 +93,16 @@ $aModule = array(
     'templates' => array(
         'oegdprbasedashboard_azure.tpl'                            => 'oe/oegdprbase/views/blocks/page/account/oegdprbasedashboard_azure.tpl',
         'oegdprbasedashboard_flow.tpl'                             => 'oe/oegdprbase/views/blocks/page/account/oegdprbasedashboard_flow.tpl',
+        'oegdprbasedashboard_roxid.tpl'                            => 'oe/oegdprbase/views/blocks/page/account/oegdprbasedashboard_roxid.tpl',
         'oegdprbaseaccountreviewaccount_menu_azure.tpl'            => 'oe/oegdprbase/views/blocks/page/account/inc/oegdprbaseaccountreviewaccount_menu_azure.tpl',
         'oegdprbaseaccountreviewaccount_menu_flow.tpl'             => 'oe/oegdprbase/views/blocks/page/account/inc/oegdprbaseaccountreviewaccount_menu_flow.tpl',
+        'oegdprbaseaccountreviewaccount_menu_roxid.tpl'            => 'oe/oegdprbase/views/blocks/page/account/inc/oegdprbaseaccountreviewaccount_menu_roxid.tpl',
         'oegdprbasedeletemyaccountconfirmation_azure_modal.tpl'    => 'oe/oegdprbase/views/blocks/page/account/oegdprbasedeletemyaccountconfirmation_azure_modal.tpl',
         'oegdprbasedeletemyaccountconfirmation_flow_modal.tpl'     => 'oe/oegdprbase/views/blocks/page/account/oegdprbasedeletemyaccountconfirmation_flow_modal.tpl',
         'oegdprbaseaccountreviewcontroller.tpl'                    => 'oe/oegdprbase/views/blocks/page/account/oegdprbaseaccountreviewcontroller.tpl',
         'oegdprbaseaccountreviewcontroller_azure.tpl'              => 'oe/oegdprbase/views/blocks/page/account/oegdprbaseaccountreviewcontroller_azure.tpl',
         'oegdprbaseaccountreviewcontroller_flow.tpl'               => 'oe/oegdprbase/views/blocks/page/account/oegdprbaseaccountreviewcontroller_flow.tpl',
+        'oegdprbaseaccountreviewcontroller_roxid.tpl'              => 'oe/oegdprbase/views/blocks/page/account/oegdprbaseaccountreviewcontroller_roxid.tpl',
         'oegdprbaseaccountreviewcontroller_confirmation_azure.tpl' => 'oe/oegdprbase/views/blocks/page/account/oegdprbaseaccountreviewcontroller_confirmation_azure.tpl',
         'oegdprbaseaccountreviewcontroller_confirmation_flow.tpl'  => 'oe/oegdprbase/views/blocks/page/account/oegdprbaseaccountreviewcontroller_confirmation_flow.tpl',
     ),
